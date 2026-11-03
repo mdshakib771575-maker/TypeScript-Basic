@@ -40,3 +40,39 @@ const toUserAction = (...args: [name: string, age: number, boolean]) => {
 }
 
 console.log(toUserAction("shakib", 29, true));
+
+
+type Address = {
+  StreetName: string,
+  holdingNum: number
+}
+
+type TUser = {
+  name: string,
+  age: number,
+  work: string[],
+  isActive: boolean,
+  action: () => void,
+  address: Address
+}
+
+interface IUser {
+  name: string,
+  age: number,
+  work: string[],
+  isActive: boolean,
+  action: () => void
+}
+
+
+const user: TUser = {
+  name: "Shakib",
+  age: 20,
+  work: ["cricket", "coding"],
+  isActive: true,
+  action: () => console.log(""),
+  address: {
+    StreetName: "asd",
+    holdingNum: 122
+  }
+}
